@@ -24,7 +24,7 @@ export class ProductsController {
   }
 
   //@Get(':id')
-  @MessagePattern({ cmd: 'find_one_product'})
+  @MessagePattern({ cmd: 'find_one_product' })
   findOne(@Payload( 'id', ParseIntPipe ) id: number) {
     return this.productsService.findOne(id);
   }
@@ -41,7 +41,7 @@ export class ProductsController {
   }
 
   //@Delete(':id')
-  @MessagePattern({ cmd: 'delete_product'})
+  @MessagePattern({ cmd: 'delete_product' })
   remove(@Payload( 'id', ParseIntPipe ) id: number) {
     return this.productsService.remove(id);
   }
